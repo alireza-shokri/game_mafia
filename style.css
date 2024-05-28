@@ -45,4 +45,8 @@ body{
 .radio-first-page{
     display: none;
 }
-
+@media screen and (max-width:425px) {
+    .content{
+        width: 170px;
+    }
+}
