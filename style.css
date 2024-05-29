@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(4, 7, 39);
+    background-color: rgb(9, 13, 54);
 }
 *{
     padding: 0;
@@ -10,28 +10,34 @@ body{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 5px;
     margin: 40px auto;
 }
 .content{
     width: 200px;
-    margin: auto;
+    margin:10px auto;
     border: red 1px solid;
     border-radius: 10px;
+    transition: linear 0.1s;
 }
 #img{
+    height:200px;
     width: 100%;
     object-fit: cover;
-    border-radius: 10px;
+   border-radius: 10px;
 }
 #prompt{
     width: 100%;
-    padding: 10px;
+   padding: 8px;
     text-align: center;
-    font-size: 24px;
+    font-size: 20px;
     background-color: rgb(75, 99, 99);
     border-bottom-left-radius: 11px;
     border-bottom-right-radius: 11px;
+}
+.href-to-main{
+    text-decoration: none;
+    color: black;
 }
 .button-start{
     width: 100%;
@@ -49,4 +55,52 @@ body{
     .content{
         width: 170px;
     }
+}
+/* ------------------------------------------------------------------------------- */
+.contentAll-2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 95%;
+    height: 720px;
+    margin: 40px auto;
+  
+}
+.parent-plaer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+.plaer{
+    width: 130px;
+}
+.img-2{
+    width: 100%;
+}
+.me{
+    margin: 0 auto;
+    width: 250px;
+   
+}
+.img-me{
+    width: 100%;
+}
+.naem-plaer{
+    color: wheat;
+    text-align: center;
+  
+    background-color: rgb(53, 46, 38);
+}
+.do-work{
+    display: flex;
+    justify-content: space-between;
+}
+.img-gun,.img-help{
+    width: 55px;
+    padding: 5px;
+}
+.img-gun{
+    width: 60px;
 }
