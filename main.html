@@ -3,35 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>game_mafia</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="contentAll-2">
-        <div class="parent-plaer">
-            <div class="plaer">
-                <img src="https://img.freepik.com/free-vector/skull-mafia-holding-double-gun-vector_43623-1259.jpg?size=338&ext=jpg&ga=GA1.1.2082370165.1716768000&semt=ais_user" alt="" class="img-2">
-                <p class="naem-plaer">reza</p>
+        <form action="">
+            <div class="parent-plaer">
+                <div class="plaer">
+                    <img src="https://img.freepik.com/free-vector/skull-mafia-holding-double-gun-vector_43623-1259.jpg?size=338&ext=jpg&ga=GA1.1.2082370165.1716768000&semt=ais_user" alt="" class="img-2">
+                    <p class="naem-plaer">reza</p>
+                    <input type="radio" class="input-radio-page2-plaer" value="reza-merabdi" name="target">
+                </div>
+                <div class="plaer">
+                    <img src="https://img.freepik.com/free-vector/skull-mafia-holding-double-gun-vector_43623-1259.jpg?size=338&ext=jpg&ga=GA1.1.2082370165.1716768000&semt=ais_user" alt=""  class="img-2" >
+                    <p class="naem-plaer">morteza</p>
+                    <input type="radio" class="input-radio-page2-plaer" value="morteza-kheri" name="target">
+                </div>
+                <div class="plaer">
+                    <img src="https://img.freepik.com/free-vector/skull-mafia-holding-double-gun-vector_43623-1259.jpg?size=338&ext=jpg&ga=GA1.1.2082370165.1716768000&semt=ais_user" alt=""  class="img-2">
+                    <p class="naem-plaer">ali</p>
+                    <input type="radio" class="input-radio-page2-plaer"  value="ali-borhani" name="target">
+                </div>
             </div>
-            <div class="plaer">
-                <img src="https://img.freepik.com/free-vector/skull-mafia-holding-double-gun-vector_43623-1259.jpg?size=338&ext=jpg&ga=GA1.1.2082370165.1716768000&semt=ais_user" alt=""  class="img-2">
-                <p class="naem-plaer">morteza</p>
+            <div class="father-buttn">
+                <button class="buttn-finsh">yes and ok</button>
             </div>
-            <div class="plaer">
-                <img src="https://img.freepik.com/free-vector/skull-mafia-holding-double-gun-vector_43623-1259.jpg?size=338&ext=jpg&ga=GA1.1.2082370165.1716768000&semt=ais_user" alt=""  class="img-2">
-                <p class="naem-plaer">ali</p>
+            <div class="me"> 
+                <div class="do-work">
+                    <span  class="parent-img-do">
+                        <img src="icon/Graphicloads-Colorful-Long-Shadow-Hand-thumbs-up-like-2.256.png" alt="img-like" class="img-like">
+                        <input type="radio" class="input-radio-page2-do" value="like" name="work">
+                    </span>
+                    <span class="parent-img-do">
+                        <img src="icon/Sykonist-Looney-Tunes-Marvin-Martian-Angry-with-gun.256.png" alt="img-gun" class="img-gun">
+                        <input type="radio" class="input-radio-page2-do" value="gun" name="work">
+                    </span>
+                    <span class="parent-img-do">
+                        <img src="icon/Medicalwp-Medical-Doctor-Briefcase-blue.256.png" alt="img-help" class="img-help">
+                        <input type="radio" class="input-radio-page2-do" value="doctor-help" name="work">
+                    </span> 
+                </div>
+                <img src="imgplaer/IMG_20230828_175427_408.jpg" alt=""  class="img-me">
+                <p class="naem-plaer">alireza</p>
             </div>
-        </div>
-        <div class="me"> 
-            <div class="do-work"> 
-                <img src="icon/Graphicloads-Colorful-Long-Shadow-Hand-thumbs-up-like-2.256.png" alt="" class="img-help">
-                <img src="icon/Sykonist-Looney-Tunes-Marvin-Martian-Angry-with-gun.256.png" alt="" class="img-gun">
-            </div>
-            <img src="https://img.freepik.com/free-vector/skull-mafia-holding-double-gun-vector_43623-1259.jpg?size=338&ext=jpg&ga=GA1.1.2082370165.1716768000&semt=ais_user" alt=""  class="img-me">
-            <p class="naem-plaer">alireza</p>
-            
-        </div>
+        </form>
     </div>
+
+    <!-- // script------------------------------------------------------------ -->
+    <script>
+        let $=document;
+        let plaer=$.querySelectorAll('.plaer');
+        let parent_img_do=$.querySelectorAll('.parent-img-do');
+        let buttn_finsh=$.querySelector('.buttn-finsh');
+        let select_work;
+        let vazet=false;
+        let vazet2=false;
+        let i2;
+
+        for(i2=0;i2<plaer.length;i2++) plaer[i2].addEventListener('click',select_target);
+        
+        for(i2=0;i2<parent_img_do.length;i2++) parent_img_do[i2].addEventListener('click',img_do);
+          
+    // img_do------------------------------------------------------------
+        function img_do(event){
+            if(event.target.nextElementSibling.value=='gun')event.target.parentElement.style.backgroundColor='red';
+            else event.target.parentElement.style.backgroundColor='green';
+            event.target.nextElementSibling.checked=true;
+            vazet=true;enable();
+            
+            parent_img_do.forEach(function(element){
+                if(element.children[1].value!=event.target.nextElementSibling.value) 
+                    element.style.backgroundColor='rgb(9, 13, 54)';})}
+
+        // enable buttn// ------------------------------------------------------------
+        function enable(){
+            if(vazet&&vazet2){buttn_finsh.style.display='inline'; buttn_finsh.disabled=false;}}
+
+
+        // select_target ------------------------------------------------------------
+        buttn_finsh.disabled=true;
+        function  select_target(event){
+            select_persen=event.target.parentElement;
+            if(select_persen.getAttribute('class')!='parent-plaer'){
+                select_persen.style.backgroundColor='red';
+                select_persen.style.transform="scale(0.95)";
+                select_persen.children[2].checked=true;
+                vazet2=true; enable();
+            // foreach-------
+            plaer.forEach(function (element){
+                if(element.lastElementChild.value!=select_persen.lastElementChild.value){
+                    if(element.style.backgroundColor=='red'){
+                    element.style.transform="scale(1)";
+                    element.style.backgroundColor='rgb(9, 13, 54)';
+                    }}});}}
+    </script>
 </body>
 </html>
