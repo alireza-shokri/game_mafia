@@ -12,17 +12,32 @@
         <form action="">
             <div class="parent-plaer">
                 <div class="plaer">
-                    <img src="https://img.freepik.com/free-vector/skull-mafia-holding-double-gun-vector_43623-1259.jpg?size=338&ext=jpg&ga=GA1.1.2082370165.1716768000&semt=ais_user" alt="" class="img-2">
+                    <div class="icon-like-dont">
+                        <img src="icon/Artdesigner-Emoticons-2-Dont-know.128.png" alt="" class="img-hed-like-dont" >
+                        <img src="icon/Graphicloads-Colorful-Long-Shadow-Hand-thumbs-up-like-2.256.png" alt="" class="img-hed-like-dont">
+                        <img src="icon/Graphicloads-Colorful-Long-Shadow-Hand-thumbs-up-like-2.256.png" alt="" class="img-hed-like-dont">
+                    </div>
+                    <img src="imgplaer/image_29_05_2024_744.jpg" alt="" class="img-2">
                     <p class="naem-plaer">reza</p>
                     <input type="radio" class="input-radio-page2-plaer" value="reza-merabdi" name="target">
                 </div>
                 <div class="plaer">
-                    <img src="https://img.freepik.com/free-vector/skull-mafia-holding-double-gun-vector_43623-1259.jpg?size=338&ext=jpg&ga=GA1.1.2082370165.1716768000&semt=ais_user" alt=""  class="img-2" >
+                    <div class="icon-like-dont">
+                        <img src="icon/Artdesigner-Emoticons-2-Dont-know.128.png" alt="" class="img-hed-like-dont" >
+                        <img src="icon/Graphicloads-Colorful-Long-Shadow-Hand-thumbs-up-like-2.256.png" alt="" class="img-hed-like-dont">
+                        <img src="icon/Graphicloads-Colorful-Long-Shadow-Hand-thumbs-up-like-2.256.png" alt="" class="img-hed-like-dont">
+                    </div>
+                    <img src="imgplaer/IMG_20230828_175427_408.jpg" alt=""  class="img-2" >
                     <p class="naem-plaer">morteza</p>
                     <input type="radio" class="input-radio-page2-plaer" value="morteza-kheri" name="target">
                 </div>
                 <div class="plaer">
-                    <img src="https://img.freepik.com/free-vector/skull-mafia-holding-double-gun-vector_43623-1259.jpg?size=338&ext=jpg&ga=GA1.1.2082370165.1716768000&semt=ais_user" alt=""  class="img-2">
+                    <div class="icon-like-dont">
+                        <img src="icon/Artdesigner-Emoticons-2-Dont-know.128.png" alt="" class="img-hed-like-dont" >
+                        <img src="icon/Graphicloads-Colorful-Long-Shadow-Hand-thumbs-up-like-2.256.png" alt="" class="img-hed-like-dont">
+                        <img src="icon/Graphicloads-Colorful-Long-Shadow-Hand-thumbs-up-like-2.256.png" alt="" class="img-hed-like-dont">
+                    </div>
+                    <img src="imgplaer/image_29_05_2024_585.jpg" alt=""  class="img-2">
                     <p class="naem-plaer">ali</p>
                     <input type="radio" class="input-radio-page2-plaer"  value="ali-borhani" name="target">
                 </div>
@@ -30,8 +45,13 @@
             <div class="father-buttn">
                 <button class="buttn-finsh">yes and ok</button>
             </div>
+
             <div class="me"> 
                 <div class="do-work">
+                    <span class="parent-img-do">
+                        <img src="icon/Artdesigner-Emoticons-2-Dont-know.128.png" alt="img-idont" class="img-indont">
+                        <input type="radio" class="input-radio-page2-do" value="idont-know" name="work">
+                    </span>
                     <span  class="parent-img-do">
                         <img src="icon/Graphicloads-Colorful-Long-Shadow-Hand-thumbs-up-like-2.256.png" alt="img-like" class="img-like">
                         <input type="radio" class="input-radio-page2-do" value="like" name="work">
@@ -45,8 +65,8 @@
                         <input type="radio" class="input-radio-page2-do" value="doctor-help" name="work">
                     </span> 
                 </div>
-                <img src="imgplaer/IMG_20230828_175427_408.jpg" alt=""  class="img-me">
-                <p class="naem-plaer">alireza</p>
+                <img src="imgplaer/IMG_20240529_010907_829.jpg" alt=""  class="img-me">
+                <p class="naem-plaer-me">alireza</p>
             </div>
         </form>
     </div>
@@ -86,17 +106,17 @@
         buttn_finsh.disabled=true;
         function  select_target(event){
             select_persen=event.target.parentElement;
-            if(select_persen.getAttribute('class')!='parent-plaer'){
-                select_persen.style.backgroundColor='red';
-                select_persen.style.transform="scale(0.95)";
-                select_persen.children[2].checked=true;
+            if(select_persen.getAttribute('class')!='parent-plaer' && select_persen.getAttribute('class')=='plaer'){
+                select_persen.children[1].style.border='2px solid red';
+                select_persen.style.transform="scale(0.90)";
+                select_persen.children[3].checked=true;
                 vazet2=true; enable();
             // foreach-------
             plaer.forEach(function (element){
                 if(element.lastElementChild.value!=select_persen.lastElementChild.value){
-                    if(element.style.backgroundColor=='red'){
+                    if(element.children[1].style.border=='2px solid red'){
                     element.style.transform="scale(1)";
-                    element.style.backgroundColor='rgb(9, 13, 54)';
+                    element.children[1].style.border='none';
                     }}});}}
     </script>
 </body>
