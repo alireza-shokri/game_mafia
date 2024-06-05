@@ -100,10 +100,20 @@ body{
     width: 120px;
     background-color: rgb(9, 13, 54);
 }
-.img-2{
+.img-mortaza,.img-ali,.img-reza{
+    display: flex;
+    align-items:start;
+    gap: 5px;
     width: 100%;
-    height: 110px;
-    object-fit: cover;
+    height: 120px;
+    background-size:cover;
+    background-image:url(imgplaer/morteza-kheri.jpg);
+}
+.img-ali{
+   background-image:url(imgplaer/ali-borhani.jpg);
+}
+.img-reza{
+   background-image:url(imgplaer/reza-merabdi.jpg);
 }
 .me{
     margin:60px  auto;
@@ -150,13 +160,8 @@ body{
     border: none;
     background-color: bisque;
 }
-.icon-like-dont{
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 5px;
-}
 .img-hed-like-dont{
     width: 25px;
+    opacity: 90%;
     background-color:blue;
 }
