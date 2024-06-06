@@ -98,28 +98,29 @@ body{
     flex-wrap: wrap;
 }
 .plaer{
-    width: 120px;
     background-color: rgb(9, 13, 54);
 }
-.img-mortaza,.img-ali,.img-reza{
-    display: flex;
-    align-items:start;
-    gap: 5px;
+.parent_img-iconHed{
     width: 100%;
-    height: 120px;
-    background-size:cover;
+    height: 140px;
+    position: relative;
 }
- .img-mortaza{
-    background-image:url(imgplaer/morteza-kheri.jpg);
- }
-.img-ali{
-   background-image:url(imgplaer/ali-borhani.jpg);
+.img-plear{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
-.img-reza{
-   background-image:url(imgplaer/reza-merabdi.jpg);
+.parent_iconHed{
+   position: absolute;
+   top: 0;
+   left: 0;
+}
+.img_hed_like-dont{
+    width: 25px;
+    background-color:blue;
 }
 .me{
-    margin:60px  auto;
+    margin:0  auto;
     width: 250px;
 }
 .img-me{
@@ -132,7 +133,7 @@ body{
     text-align: center;
     background-color: rgb(53, 46, 38);
 }
-.naem-plaer-me{
+.naem-me{
     color: wheat;
     text-align: center;
     background-color: blue;
@@ -149,24 +150,18 @@ body{
     width: 62px;
     padding: 5px;
 }
-.input-radio-page2-plaer,.input-radio-page2-do{
+.input_radio-plaer,.input_radio-do{
     display: none;
 }
 .father-buttn{
     width: 180px;
-    margin: 30px auto;
+    margin: 60px auto;
     height: 20px;
 }
 .buttn-finsh{
     display: none;
-   
     width: 100%;
     padding: 10px;
     border: none;
     background-color: bisque;
-}
-.img-hed-like-dont{
-    width: 25px;
-    opacity: 90%;
-    background-color:blue;
 }
